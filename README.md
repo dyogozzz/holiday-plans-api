@@ -15,46 +15,47 @@ Certifique-se de ter o Docker e o Docker Compose instalados em sua máquina.
 ### Passos para Configuração
 
 1. Clone o repositório:
-  ```bash
-  git clone https://github.com/dyogozzz/holiday-plans-api.git
-  ```
+
+```bash
+git clone https://github.com/dyogozzz/holiday-plans-api.git
+```
 
 2. Navegue até o diretório do projeto:
 
-  ```bash
-  cd holiday-plans-api
-  ```
+```bash
+cd holiday-plans-api
+```
 
 3. Configure o ambiente:
   - Copie o arquivo `.env.example` mudando o nome para '.env' e ajuste as configurações.
 
-  ```
-  cp .env.example .env
-  ```
+```bash
+cp .env.example .env
+```
 
 4. Crie e inicie os container docker:
 
-  ```
-  docker-compose up -d
-  ```
+```bash
+docker-compose up -d
+```
 
 5. Acesse o container do aplicativo e instale as dependências:
 
-  ```
-  docker-compose exec app composer install
-  ```
+```bash
+docker-compose exec app composer install
+```
 
 6. Gere a chave de aplicação:
 
-  ```
-  docker-compose exec app php artisan key:generate
-  ```
+```bash
+docker-compose exec app php artisan key:generate
+```
 
 7. Execute as migrations:
 
-  ```
-  docker-compose exec app php artisan migrate
-  ```
+```bash
+docker-compose exec app php artisan migrate
+```
 
 ##
 Uso
@@ -65,7 +66,7 @@ Autenticação:
   
 Registrar usuário 
   
-POST to /register
+POST para /register
 
     {
       "name: "Dyogo",
@@ -75,7 +76,7 @@ POST to /register
 
   Login 
   
-POST to /login
+POST para /login
 
     {
       "email": "dyogozanetti@test.com",
@@ -84,9 +85,9 @@ POST to /login
 
 Holiday crud
 
-Create
+Criar
 
-POST to /holiday-plans
+POST para /holiday-plans
     
     {
       "title" : "Viagem para a praia",
@@ -96,37 +97,37 @@ POST to /holiday-plans
       "participants": ["Alice", Bob]
     }
 
-List
+Listar
 
-GET to /holiday-plans
+GET para /holiday-plans
 
-View
+Visualizar
 
-GET to /holiday-plans/{id}
+GET para /holiday-plans/{id}
 
-Update
+Atualizar
 
-PUT to /holiday-plans/{id}
+PUT para /holiday-plans/{id}
 
     {
       "title": "Viagem para a montanha",
       "description": "Planejamento de viagem para a montanha"
     }
 
-Delete
+Deletar
 
-DELETE to /holiday-plans/{id}
+DELETE para /holiday-plans/{id}
 
-PDF Generation
+Geração de PDF
 
-POST to /holiday-plans/{id}/generate-pdf
+POST para /holiday-plans/{id}/generate-pdf
 
 ##
 Executando testes automatizados
 
 - Copie o arquivo `.env.testing.example` mudando o nome para '.env.testing' e ajuste o APP_KEY.
 
-```
+```bash
 docker-compose exec app php artisan test
 ```
 
