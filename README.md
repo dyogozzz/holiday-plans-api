@@ -1,6 +1,10 @@
 This documentation is available in PT-BR and EN
 
+There is a file called "Insomnia_xxx-xx-xx.json" in the root of the project which is an insomnia/postman file to more easily import and test the routes, in addition to the operation of the routes further down in this documentation.
+
 A documentação está disponível em PT-BR e em EN
+
+Tem um arquivo chamado "Insomnia_xxx-xx-xx.json" na raiz do projeto que é um arquivo insomnia/postman para importar e testar mais facilmente as rotas, além do funcionamento das rotas mais abaixo nessa documentação.
 
 ## EN
 
@@ -74,20 +78,24 @@ Register user
 
 POST to /register
 
-{
-"name: "Dyogo",
-"email": "dyogozanetti@test.com",
-"password": "12345678"
-}
+  ```
+    {
+    "name: "Dyogo",
+    "email": "dyogozanetti@test.com",
+    "password": "12345678"
+    }
+  ```
 
 Login
 
 POST to /login
 
-{
-"email": "dyogozanetti@test.com",
-"password": "12345678"
-}
+  ```
+    {
+    "email": "dyogozanetti@test.com",
+    "password": "12345678"
+    }
+  ```
 
 Holiday crud
 
@@ -95,13 +103,15 @@ Create
 
 POST to /holiday-plans
 
-{
-"title" : "Beach Trip",
-"description": "Beach Trip Planning",
-"date": "2024-12-25",
-"location": "Copacabana Beach",
-"participants": ["Alice", Bob]
-}
+  ```
+    {
+    "title" : "Beach Trip",
+    "description": "Beach Trip Planning",
+    "date": "2024-12-25",
+    "location": "Copacabana Beach",
+    "participants": ["Alice", Bob]
+    }
+  ```
 
 List
 
@@ -115,10 +125,12 @@ Refresh
 
 PUT to /holiday-plans/{id}
 
-{
-"title": "Mountain Trip",
-"description": "Mountain Trip Planning"
-}
+  ```
+    {
+    "title": "Mountain Trip",
+    "description": "Mountain Trip Planning"
+    }
+  ```
 
 Delete
 
@@ -216,27 +228,32 @@ Registrar usuário
   
 POST para /register
 
+  ```
     {
       "name: "Dyogo",
       "email": "dyogozanetti@test.com",
       "password": "12345678"
     }
+  ```
 
   Login 
   
 POST para /login
 
+  ```
     {
       "email": "dyogozanetti@test.com",
       "password": "12345678"
     }
+  ```
 
 Holiday crud
 
 Criar
 
 POST para /holiday-plans
-    
+
+  ```
     {
       "title" : "Viagem para a praia",
       "description": "Planejamento de viagem para a praia",
@@ -244,6 +261,7 @@ POST para /holiday-plans
       "location": "Praia de Copacabana",
       "participants": ["Alice", Bob]
     }
+  ```  
 
 Listar
 
@@ -257,10 +275,12 @@ Atualizar
 
 PUT para /holiday-plans/{id}
 
+  ```
     {
       "title": "Viagem para a montanha",
       "description": "Planejamento de viagem para a montanha"
     }
+  ```
 
 Deletar
 
