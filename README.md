@@ -80,9 +80,9 @@ POST to /register
 
   ```
     {
-    "name: "Dyogo",
-    "email": "dyogozanetti@test.com",
-    "password": "12345678"
+      "name: "Dyogo",
+      "email": "dyogozanetti@test.com",
+      "password": "12345678"
     }
   ```
 
@@ -92,8 +92,8 @@ POST to /login
 
   ```
     {
-    "email": "dyogozanetti@test.com",
-    "password": "12345678"
+      "email": "dyogozanetti@test.com",
+      "password": "12345678"
     }
   ```
 
@@ -105,11 +105,11 @@ POST to /holiday-plans
 
   ```
     {
-    "title" : "Beach Trip",
-    "description": "Beach Trip Planning",
-    "date": "2024-12-25",
-    "location": "Copacabana Beach",
-    "participants": ["Alice", Bob]
+      "title" : "Beach Trip",
+      "description": "Beach Trip Planning",
+      "date": "2024-12-25",
+      "location": "Copacabana Beach",
+      "participants": ["Alice", Bob]
     }
   ```
 
@@ -127,8 +127,8 @@ PUT to /holiday-plans/{id}
 
   ```
     {
-    "title": "Mountain Trip",
-    "description": "Mountain Trip Planning"
+      "title": "Mountain Trip",
+      "description": "Mountain Trip Planning"
     }
   ```
 
