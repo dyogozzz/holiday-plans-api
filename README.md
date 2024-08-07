@@ -1,3 +1,151 @@
+This documentation is available in PT-BR and EN
+
+A documentação está disponível em PT-BR e em EN
+
+## EN
+
+# Holiday Plans API
+
+The API for managing vacation plans, with CRUD (Create, Read, Update, Delete) functionality and generating PDFs of the plans.
+
+## Description
+
+This API allows users to create, view, update and delete vacation plans. It also provides the functionality to generate PDFs for the vacation plans.
+
+## Installation
+
+### Prerequisites
+
+Make sure you have Docker and Docker Compose installed on your machine.
+
+### Configuration Steps
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/dyogozzz/holiday-plans-api.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd holiday-plans-api
+```
+
+3. Configure the environment:
+- Copy the `.env.example` file, changing the name to '.env' and adjust the settings.
+
+```bash
+cp .env.example .env
+```
+
+4. Create and start the docker containers:
+
+```bash
+docker-compose up -d
+```
+
+5. Access the application container and install the dependencies:
+
+```bash
+docker-compose exec app composer install
+```
+
+6. Generate the application key:
+
+```bash
+docker-compose exec app php artisan key:generate
+```
+
+7. Run the migrations:
+
+```bash
+docker-compose exec app php artisan migrate
+```
+
+##
+Usage
+
+The api will be available at "http://127.0.0.1:8080/api"
+
+Authentication:
+
+Register user
+
+POST to /register
+
+{
+"name: "Dyogo",
+"email": "dyogozanetti@test.com",
+"password": "12345678"
+}
+
+Login
+
+POST to /login
+
+{
+"email": "dyogozanetti@test.com",
+"password": "12345678"
+}
+
+Holiday crud
+
+Create
+
+POST to /holiday-plans
+
+{
+"title" : "Beach Trip",
+"description": "Beach Trip Planning",
+"date": "2024-12-25",
+"location": "Copacabana Beach",
+"participants": ["Alice", Bob]
+}
+
+List
+
+GET to /holiday-plans
+
+View
+
+GET to /holiday-plans/{id}
+
+Refresh
+
+PUT to /holiday-plans/{id}
+
+{
+"title": "Mountain Trip",
+"description": "Mountain Trip Planning"
+}
+
+Delete
+
+DELETE for /holiday-plans/{id}
+
+PDF Generation
+
+POST for /holiday-plans/{id}/generate-pdf
+
+##
+Running Automated Tests
+
+- Copy the `.env.testing.example` file, renaming it '.env.testing' and adjusting the APP_KEY.
+
+```bash
+docker-compose exec app php artisan test
+```
+
+##
+Demo Video
+
+[Demo Video](https://www.youtube.com/watch?v=N2OX8sSO7SU) (open in new tab)
+
+##
+
+## PT-BR
+
 # Holiday Plans API
 
 A API para gerenciar planos de férias, com funcionalidades para CRUD (Criar, Ler, Atualizar, Excluir) e geração de PDFs dos planos.
